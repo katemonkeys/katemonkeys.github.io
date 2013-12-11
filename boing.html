@@ -1,0 +1,69 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+    <title>Kate Jenkins</title>
+
+    <link rel="stylesheet" href="stylesheets/styles.css">
+    <link rel="stylesheet" href="stylesheets/pygment_trac.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+  </head>
+  <body>
+    <div class="wrapper">
+      <header>
+        <h1>Kate Jenkins</h1>
+        <p>Mechanical, inflammable, insufferable. </p>
+
+        <p class="socialLinks">
+          <a href="http://github.com/katemonkeys"></a>
+          <a href="http://twitter.com/katemonkeys"></a>
+          <a href="http://www.linkedin.com/in/katemonkeys"></a>
+          <a href="mailto:catherine.ann.jenkins@gmail.com">&#9993;</a>
+        </p>
+
+        <p>
+          <a href="boing.html">Boing</a><br>
+          <a href="synesthesia.html">Synesthesia</a><br>
+          <a href="http://www.laser-school.org/blog/">LASER</a><br>
+          <a href="http://geminijaney.livejournal.com/">Travels</a>
+        </p>
+
+      </header>
+      <section>
+        <h2>
+<a name="boing" class="anchor" href="#boing"><span class="octicon octicon-link"></span></a>Boing</h2>
+
+<img class='heavy' align='center' src='javascripts/boing-logo.png'></img>
+
+Boing is a companion app for fifth and sixth grade science classrooms. Teachers can upload video or document content, enable classroom discussions, and provide online interactive notes. We even made a <a href='http://www.youtube.com/watch?v=rdjR3H88TPQ'>screencast</a> showing some of the key features.
+
+<img class='heavy' align='center' src='javascripts/content-tab.png'></img>
+<img class='heavy' align='center' src='javascripts/notes-tab.png'></img>
+<img class='heavy' align='center' src='javascripts/chat-tab.png'></img>
+
+Cool, right? What you don’t see that is also cool is the fact that we -- <a href="https://github.com/georgebonnr" class="user-mention">@georgebonnr</a>, <a href="https://github.com/kelWill" class="user-mention">@kelWill</a>, <a href="https://github.com/stangah" class="user-mention">@stangah</a>, <a href="https://github.com/katemonkeys" class="user-mention">@katemonkeys</a> -- built it as part of a private beta test for <a href='http://www.forbes.com/sites/anthonykosner/2013/12/04/whats-next-in-2014-your-apps-can-get-famo-us/
+'>famo.us</a>, a futuristic JavaScript development platform. We took advantage of the famo.us 3D rendering and physics engines, which manipulate DOM elements around the screen using millions of matrix transformations calculated through the GPU, not the CPU, so a browser-based app can be as fast as native and equally easy to develop for mobile, tablet, TV, or desktop. You can play with somewhat obfuscated versions of their widgets over at <a href='http://codepen.io/befamous'>codepen</a> or just hang out till February 2014 to see it in its open source glory. 
+
+I mostly built the games. In the simple game that ended up in the final product, I just used gesture tracking and imposed some physics-based principles to make the motion feel more realistic: particle drag, walls around the edge of the screen so a kid can’t fling the pieces out of view, torque and a finite moment of inertia around the centroid of the gamepiece to make it more visually dynamic. 
+
+<img class='heavy' align='center' src='javascripts/game-dragging.png'></img>
+
+I also built a simplified version of <a href='http://en.wikipedia.org/wiki/Portal_(video_game)'>Portal</a>, where the user drives a “magnet” around to push other balls into goals for points, and the particles would then teleport to different areas of the screen with different matrix transformations. This version implements a concept of materials behavior by using two independent sets of physical parameters for different gamepieces: those of “wood” were only subject to collisions from the magnet  main piece, but those of “metal” could be pushed in groups at a distance using interparticle repulsion and flocking rules. 
+
+<img class='heavy' align='center' src='javascripts/game-portal.png'></img>
+
+The third game is crazy fun for both the user and the observers. It’s a pitch matching game using .getUserMedia to stream microphone input that drives the control flow for how to render the DOM tree, instead of touch-based gestures to position a player’s pieces. It means that a player sings to their computer as they play in order to make the pieces behave as they wish, so it is the most fun for their friends to watch and cheer. 
+
+<img class='heavy' align='center' src='javascripts/game-pitch.png'></img>
+
+Building Boing was a lot of fun. We the authors really hope it gains some traction as a useful educational tool, and that you have as much fun writing, learning, chatting, and playing with it as we did making it. 
+      </section>
+      <footer>
+        <p><small>Hosted on GitHub Pages &mdash; Theme by <a href="https://github.com/orderedlist">orderedlist</a></small></p>
+      </footer>
+    </div>
+    <script src="javascripts/scale.fix.js"></script>
+    
+  </body>
+</html>

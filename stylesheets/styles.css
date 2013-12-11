@@ -278,6 +278,10 @@ footer {
 
 }
 
+.heavy {
+  margin-bottom: 10px;
+}
+
 .socialLinks {
   font-family: 'entypo-social';
   font-size: 48px;
