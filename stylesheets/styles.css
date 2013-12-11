@@ -279,7 +279,7 @@ footer {
 }
 
 .socialLinks {
-  font-family: 'entypo-social';
+  font-face: 'entypo-social';
   font-size: 48px;
   float: right;
   margin-right: 10px;
