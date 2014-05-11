@@ -43,15 +43,15 @@
 
         <img class='heavy' width='450px' align='center' src='javascripts/glass/1.png'></img>
 
-        <p>On the technical side, Glass released XE17 literally yesterday but it is still ultimately based on Android 4.4 (KitKat) so I wouldn't expect compatibility issues if you haven't upgraded yet. In debug mode, you can run unapproved apps over a USB connection, and I used the <a href="https://api.wearscript.com/">browser IDE</a> and kept the console open instead of using the more traditional Android SDK with Eclipse and Java. For device emulation and screen capturing I like Droid@screen. </p>
+        <p>On the technical side, Glass released XE17 literally yesterday but it is still ultimately based on Android 4.4 (KitKat) so I wouldn't expect compatibility issues if you haven't upgraded yet. In debug mode, you can run unapproved apps over a USB connection, so I used the <a href="https://api.wearscript.com/">browser IDE</a> and kept the console open instead of using the more traditional Android SDK with Eclipse and Java. For device emulation and screen capturing I like Droid@screen, which is a .jar file so you do need XCode as well. </p>
 
         <center><img class='heavy' width='300px' align='center' src='javascripts/glass/2.png'></img></center>
 
         <p>WearScript is a JavaScript implementation of the Mirror API and is part of the OpenShades project. It is also the most gleeful fun I have had developing for a hardware device in a while, chortling merrily as my Glass went 'spling!' on command: 
 
-        <pre>WS.sound('SUCCESS')</pre> 
+        <pre>WS.sound('SUCCESS');</pre> 
 
-        Initially I thought my Glass just had terrible battery life but I later realized that it was just having overheating issues because I was driving it so hard, haha. I also laughed out loud with delight when I successfully executed the first Gist, which only changes the display color with orientation. The entire code snippet for glass.html is below.</p>
+        Initially I thought my Glass just had terrible battery life but I later realized that it was just having overheating issues because I was driving it so hard, haha. I also laughed out loud with delight when I successfully executed the first Gist in the demo docs, which only changes the display color with orientation. The display output and the entire code snippet for the script tag within glass.html is below.</p>
         <center><img class='heavy' width='300px' align='center' src='javascripts/glass/3.png'></img></center>
         <p><pre>
           WS.sensorOn('orientation', .15, function (data) {
@@ -68,11 +68,13 @@
         </pre>
         </p>
 
-        <p>My own actual app is devastatingly simplistic but nonetheless demonstrates speech- and gesture-based user input, asset and process management, and other wildly impressive things.</p>
+        <p>My own actual nano-app is devastatingly simplistic but nonetheless demonstrates speech- and gesture-based user input, asset and process management, and other wildly impressive things.</p>
         <center><img class='heavy' width='300px' align='center' src='javascripts/glass/4.png'></img>
         <img class='heavy' width='300px' align='center' src='javascripts/glass/5.png'></img>
         <img class='heavy' width='300px' align='center' src='javascripts/glass/6.png'></img>
         <img class='heavy' width='300px' align='center' src='javascripts/glass/7.png'></img></center>
+
+        <p>I'm looking forward to the future ;)</p>
 
       </section>
       <footer>
