@@ -41,17 +41,19 @@
 <a name="glass-banana" class="anchor" href="#glass-banana"><span class="octicon octicon-link"></span></a>The Glass Banana</h2>
         <p>For the <a href="http://www.angelhack.com/event/angelhack-san-francisco-spring-2014/">AngelHack SF</a> hackathon on May 10-11, 2014, I joined the Explorers and began to investigate what was possible with Google Glass, WearScript (<a href="https://github.com/wearscript">Github</a> or <a href="http://www.wearscript.com/en/latest/">Docs</a>), and a good old-fashioned <a href="http://www.sharkbanana.com">sharkbanana</a>. The WearScript API gives developers access to all the sensors: light, accelerometer, bluetooth, and so on, but most excitingly it can execute behavior based on iBeacon location detection. This last one will be *huge* for anyone interested in contextual computing, social interaction awareness, and behavioral notifications.</p>
 
-        <center><img class='heavy' width='300px' align='center' src='javascripts/glass/1.png'></img></center>
+        <img class='heavy' width='450px' align='center' src='javascripts/glass/1.png'></img>
 
         <p>On the technical side, Glass released XE17 literally yesterday but it is still ultimately based on Android 4.4 (KitKat) so I wouldn't expect compatibility issues if you haven't upgraded yet. In debug mode, you can run unapproved apps over a USB connection, and I used the <a href="https://api.wearscript.com/">browser IDE</a> and kept the console open instead of using the more traditional Android SDK with Eclipse and Java. For device emulation and screen capturing I like Droid@screen. </p>
 
         <center><img class='heavy' width='300px' align='center' src='javascripts/glass/2.png'></img></center>
 
-        <p>WearScript is a JavaScript implementation of the Mirror API and is part of the OpenShades project. It is also the most gleeful fun I have had developing for a hardware device in a while, chortling merrily as my Glass went 'spling!' on command (<pre>WS.sound('SUCCESS')</pre>). Initially I thought my Glass just had terrible battery life but I later realized that it was just having overheating issues because I was driving it so hard, haha. I also laughed out loud with delight when I successfully executed the first Gist, which only changes the display color with orientation. The entire code snippet for glass.html is below.</p>
+        <p>WearScript is a JavaScript implementation of the Mirror API and is part of the OpenShades project. It is also the most gleeful fun I have had developing for a hardware device in a while, chortling merrily as my Glass went 'spling!' on command: 
+
+        <pre>WS.sound('SUCCESS')</pre> 
+
+        Initially I thought my Glass just had terrible battery life but I later realized that it was just having overheating issues because I was driving it so hard, haha. I also laughed out loud with delight when I successfully executed the first Gist, which only changes the display color with orientation. The entire code snippet for glass.html is below.</p>
         <center><img class='heavy' width='300px' align='center' src='javascripts/glass/3.png'></img></center>
         <p><pre>
-          <canvas id="canvas" width="640" height="360" style="display:block"></canvas>
-          <script>
           WS.sensorOn('orientation', .15, function (data) {
             ctx.fillStyle = 'hsl(' + data['values'][0] + ', 90%, 50%)'
             ctx.fillRect(0, 0, 640, 360);
@@ -63,7 +65,6 @@
             WS.serverConnect('{{WSUrl}}', server);
           }
           window.onload = main;
-          </script>
         </pre>
         </p>
 
