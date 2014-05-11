@@ -39,7 +39,43 @@
       <section>
         <h2>
 <a name="glass-banana" class="anchor" href="#glass-banana"><span class="octicon octicon-link"></span></a>The Glass Banana</h2>
-        <p></p>
+        <p>For the AngelHack SF Hackathon on May 10-11, 2014, I joined the Explorers and began to investigate what was possible with Google Glass, WearScript (Github https://github.com/wearscript or Docs http://www.wearscript.com/en/latest/), and a good old-fashioned sharkbanana (www.sharkbanana.com). The WearScript API gives developers access to all the sensors: light, accelerometer, bluetooth, and so on, but most excitingly it can execute behavior based on iBeacon location detection. This last one will be *huge* for anyone interested in contextual computing, social interaction awareness, and behavioral notifications.</p>
+
+        <img class='heavy' width='450px' align='center' src='javascripts/glass/1.png'></img>
+
+        <p>On the technical side, Glass released XE17 literally yesterday but it is still ultimately based on Android 4.4 (KitKat) so I wouldn't expect compatibility issues if you haven't upgraded yet. In debug mode, you can run unapproved apps over a USB connection, and I used the browser IDE available at https://api.wearscript.com/ and kept the console open instead of using the more traditional Android SDK with Eclipse and Java. For device emulation and screen capturing I like Droid@screen. </p>
+        <img class='heavy' width='450px' align='center' src='javascripts/glass/2.png'></img>
+        <p>WearScript is a JavaScript implementation of the Mirror API and is part of the OpenShades project. It is also the most gleeful fun I have had developing for a hardware device in a while, chortling merrily as my Glass went 'spling!' on command (<code>WS.sound('SUCCESS')</code>). Initially I thought my Glass just had terrible battery life but I later realized that it was just having overheating issues because I was driving it so hard, haha. I also laughed out loud with delight when I successfully executed the first Gist, which changes the display color with orientation. The entire code snippet for glass.html is below.</p>
+        <img class='heavy' width='450px' align='center' src='javascripts/glass/3.png'></img>
+        <p><pre>
+          <html style="width:100%; height:100%; overflow:hidden">
+          <head></head>
+          <body>
+          <canvas id="canvas" width="640" height="360" style="display:block"></canvas>
+          <script>
+          WS.sensorOn('orientation', .15, function (data) {
+            ctx.fillStyle = 'hsl(' + data['values'][0] + ', 90%, 50%)'
+            ctx.fillRect(0, 0, 640, 360);
+          });
+
+          function main() {
+            if (WS.scriptVersion(1)) return;
+            ctx = document.getElementById('canvas').getContext("2d");
+            WS.serverConnect('{{WSUrl}}', server);
+          }
+          window.onload = main;
+          </script>
+          </body>
+          </html>
+        </pre>
+        </p>
+
+        <p>My own actual app is devastatingly simplistic but nonetheless demonstrates speech- and gesture-based user input, asset and process management, and probably some other impressive things.</p>
+        <img class='heavy' width='450px' align='center' src='javascripts/glass/4.png'></img>
+        <img class='heavy' width='450px' align='center' src='javascripts/glass/5.png'></img>
+        <img class='heavy' width='450px' align='center' src='javascripts/glass/6.png'></img>
+        <img class='heavy' width='450px' align='center' src='javascripts/glass/7.png'></img>
+
       </section>
       <footer>
         <p><small>Hosted on GitHub Pages &mdash; Theme by <a href="https://github.com/orderedlist">orderedlist</a></small></p>
