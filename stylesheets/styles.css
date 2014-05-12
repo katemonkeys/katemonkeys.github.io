@@ -96,8 +96,10 @@ img {
 }
 
 @media screen and (max-width: 720px) {
-  .mobile-hide{ display: none; }
-  .mobile-hide{ visibility: none; }
+  .mobile-hide{ 
+    /*display: none; */
+    visibility: collapse;
+  }
 }
 header {
   width:270px;
