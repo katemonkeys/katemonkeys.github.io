@@ -95,12 +95,12 @@ img {
   max-width:100%;
 }
 
-@media screen and (max-width: 720px) {
+@media screen and (max-width: 30em) {
   .mobile-hide{ 
     display: none; 
   }
   .mobile-embiggen{
-    width: auto;
+    width: 30em;
   }
 }
 
