@@ -101,6 +101,7 @@ img {
   }
   .mobile-embiggen{
     width: 30em;
+    float:left;
   }
 }
 
