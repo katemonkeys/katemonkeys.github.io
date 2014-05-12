@@ -95,6 +95,10 @@ img {
   max-width:100%;
 }
 
+@media screen and (max-width: 720px) {
+  .mobile-hide{ display: none; }
+  .mobile-hide{ visibility: none; }
+}
 header {
   width:270px;
   float:left;
