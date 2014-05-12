@@ -100,7 +100,7 @@ img {
     display: none; 
   }
   .mobile-embiggen{
-    width: 100%;
+    width: auto;
   }
 }
 
