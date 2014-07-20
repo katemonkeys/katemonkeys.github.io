@@ -1,0 +1,71 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+    <title>The Glass Banana</title>
+
+    <link rel="stylesheet" href="stylesheets/styles.css">
+    <link rel="stylesheet" href="stylesheets/pygment_trac.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <!--[if lt IE 9]>
+    <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+  </head>
+  <body>
+    <div class="wrapper">
+      <header class="mobile-hide">
+        <h1>Kate Jenkins</h1>
+        <p>Mechanical, inflammable, insufferable. </p>
+
+        <p class="socialLinks">
+          <a href="http://github.com/katemonkeys"><img height="24px" src="stylesheets/SVG/github.svg"></a>
+          <a href="http://twitter.com/katemonkeys"><img height="24px" src="stylesheets/SVG/twitter.svg"></a>
+          <a href="http://www.linkedin.com/in/katemonkeys"><img height="24px" src="stylesheets/SVG/linkedin.svg"></a>
+          <a href="mailto:catherine.ann.jenkins@gmail.com"><img height="24px" src="stylesheets/SVG/mail.svg"></a>
+        </p>
+
+        <p>
+          <a href="index.html">Home</a><br>
+          <a href="boing.html">Boing</a><br>
+          <a href="synesthesia.html">Synesthesia</a><br>
+          <a href="marmot.html">Marmot Creek</a><br>
+          <a href="glass-banana.html">The Glass Banana</a><br>
+          <a href="laser.html">LASER</a><br>
+          <a href="tesselcopter.html">Tesselcopter</a><br>
+          <a href="http://geminijaney.livejournal.com/">Travels</a>
+        </p>
+
+      </header>
+      <section class="mobile-embiggen">
+        <h2>
+<a name="tesselcopter" class="anchor" href="#tesselcopter"><span class="octicon octicon-link"></span></a>Tesselcopter</h2>
+
+        <center><img class='heavy' width='300px' align='center' src='javascripts/tessel/modules.png'></img></center>
+<p>The good people of Tessel came to Hack Reactor last weekend for an alumni hackathon to the excitement of probably 50-60 newly converted hardware enthusiasts. Tessels are modular boards that run tiny node.js servers that are ridiculously easy to install and configure. Team Tesselcopter was inspired by a hobby purchase from Amazon Prime and ultimately ended up being controlled by separate accelerometer and climate modules where the signals are relayed via infrared.</p>
+
+        <center><img class='heavy' width='300px' align='center' src='javascripts/tessel/tessel1.jpg'></img></center>
+<p>The idea was originally conceived to be a control system based on muscular impulses through an EMG (electromyograph) and a transmission system where we reverse-engineered the entire manufacturer protocol for IR communication and wrote a full discrete API for the flight. After some good natured but complete failures, the final project ended up being a control system based on gesture and breath and relayed by recorded buffer streams. Who knew that EMGs don’t produce reliable signals or that decoding an IR protocol would take more than a single afternoon?</p>
+
+        <center><img class='heavy' width='300px' align='center' src='javascripts/tessel/tessel2.jpg'></img></center>
+<p>Our first success was mimicking the control signal for the speaker amplifier in the lounge, in the process both learning how to send “volume up” and “volume down” commands via Tessel-IR and annoying everyone in the room. Unfortunately the helicopter remote control protocol turned out to be more complicated, and even with several trips to the Radio Shack downstairs and the kind loan of a logic analyzer from one of the Tessel guys, we couldn’t decompose the raw signal quickly enough and had to resort to recording packets of known information and playing them back in a callback through the IR LED. </p>
+
+        <center><img class='heavy' width='300px' align='center' src='javascripts/tessel/tessel3.jpg'></img></center>
+<p>The copter only escaped once, hurtling towards the ceiling sprinkler system on maxForward and bouncing to crash land on the laptop of an innocent hacker from another team. With that demonstration the relay group was ready to merge the API in to the control team’s repo. It was only a matter of time before they were breathing hot breath on the humidity sensor to fly forward, and sucking cold air backwards over the humidity sensor to fly backwards. Please believe me when I say that repeated console logs of “RETREAT MY PRECIOUS” only get funnier. </p>
+        <center><img class='heavy' width='300px' align='center' src='javascripts/tessel/tessel4.jpg'></img></center>
+
+<p>In conclusion, our demo didn't work but everyone loved it regardless. The helicopter flew, that's all I'm saying.</p>
+
+<p>Team members: Kate Jenkins, Rohan Pethiyagoda, Mark Rossetti, Nick Vandewalle</p>
+        <center><img class='heavy' width='300px' align='center' src='javascripts/tessel/tessel5.jpg'></img></center>
+<p>PS. For a serious writeup with actual code, see the <a href="https://github.com/rossetti211/tesselcopter">readme</a>, including explanation of debouncing the gesture recognition on the accelerometer modules. For even more information and other examples see the <a href="http://projects.tessel.io">projects website</a>.</p>
+
+      </section>
+      <footer class="mobile-hide">
+        <p><small>Hosted on GitHub Pages &mdash; Theme by <a href="https://github.com/orderedlist">orderedlist</a></small></p>
+      </footer>
+    </div>
+    <script src="javascripts/scale.fix.js"></script>
+    
+  </body>
+</html>
